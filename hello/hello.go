@@ -8,8 +8,13 @@ import (
 
 func main() {
 
-	message := greetings.Hello("tristan")
+	message, err := greetings.Hello("")
 
-	fmt.Printf(message)
+	if err != nil {
+
+		fmt.Println(err.Error())
+	}
+
+	fmt.Println(message)
 
 }
